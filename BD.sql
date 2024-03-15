@@ -18,7 +18,7 @@ nome_produtos VARCHAR(255) NOT NULL,
 quantidade_produtos INT NOT NULL,
 valor_produtos DECIMAL(7,2) NOT NULL,
 validade_produtos DATE NOT NULL,
-FOREIGN KEY id_funcionarios REFERENCES FUNCIONARIOS--Chave Estrangeira ^
+FOREIGN KEY (id_funcionarios) REFERENCES FUNCIONARIOS (id_funcionarios)--Chave Estrangeira ^
 )
 -- Alterando campos da tabelas
 ALTER TABLE funcionarios
