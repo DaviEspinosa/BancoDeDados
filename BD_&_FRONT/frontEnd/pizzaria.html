@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzarí</title>
+    <title>Login</title>
     <link rel="stylesheet" href="pizzaria.css">
 </head>
 
@@ -28,9 +28,20 @@
         </div>
     </header>
 
-    <div class="container-carousel">
-        <img src="" alt="propaganda">
-    </div>
+    <section class="container-form">
+        <form action="buscar.php" method="POST">
+            <h3>Cadastre-se</h3>
+            <label for="">Nome</label>
+            <input type="name" name="name" placeholder="..." required>
+            <label for="">E-mail</label>
+            <input type="email" name="email" placeholder="..." required>
+            <label for="">Telefone</label>
+            <input type="tel" name="number" placeholder="..." required>
+
+            <button type="submit" name="enviar">Enviar</button>
+        </form>
+    </section>
+
 </body>
 
 </html>

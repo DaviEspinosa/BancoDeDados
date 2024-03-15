@@ -1,11 +1,12 @@
-body{
+
+*, body{
     padding: 0;
     margin: 0;
     height: 100%;
     width: 100%;
 }
 header{
-    height: 70px;
+    height: 60px;
     width: 100%;
     background-color: rgb(146, 19, 19);
 }
@@ -17,7 +18,7 @@ header{
 }
 img{
     width: 20%;
-    height: 70;
+    height: 60px;
 }
 ul{
     width: 60%;
@@ -25,12 +26,15 @@ ul{
     list-style: none;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-li a{
+
+li, li a{
     text-decoration: none;
     color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .search{
     height: 100%;
@@ -38,14 +42,35 @@ li a{
 }
 
 /* =--=-=-Container-==-=- */
-.container-carousel{
-    margin-top: 100px;
+.container-form{
+    height: 90%;
     width: 100%;
-    height: 400px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center;
 }
-.container-carousel{
-    
+ form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    height: 40%;
+    width: 50%;
+    background-color: rgb(226, 226, 226);
+}
+form h3{
+    height: 20px;
+}
+form label{
+    width: 100%;
+    height: 20px;
+}
+form input{
+    width: 100%;
+    height: 40px;
+}
+form button{
+    height: 40px;
+    color: aliceblue;
+    background-color: rgb(146, 19, 19);
 }
