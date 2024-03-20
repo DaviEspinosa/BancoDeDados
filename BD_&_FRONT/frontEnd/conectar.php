@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $port = "5432";
-$dbname = "pizzariabd";
+$dbname = "PizzariaBD";
 $user = "postgres";
 $password = "postgres";
 
@@ -10,4 +10,7 @@ $conectarBD = pg_connect("host=$host port=$port dbname=$dbname user=$user passwo
 
 if (!$conectarBD) {
     echo("Falha na conexão com o banco de dados");
+}
+else {
+    echo("Conexão bem sucedida");
 }
