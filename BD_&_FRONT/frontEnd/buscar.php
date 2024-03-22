@@ -1,29 +1,38 @@
 <?php
 include ('conectar.php');
 
-// consultando minha tabela
-
 // Verifica se o formulário foi submetido
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Verifica se o campo "nome" foi preenchido
-    if (!empty($_POST["name"&& "email"&& "number"])) {
-        // Limpa os dados de entrada para evitar injeção de SQL
-        $campos = pg_escape_string($_POST["name" && "email" && "number"]);
+
+    // Obtém os valores do formulário
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $tel = $_POST["number"];
+
+    // Verifica se os campos não estão vazios
+    if (!empty($name) && !empty($email) && !empty($tel)) {
         
-        // Query SQL para inserir os campos no banco de dados
-        $query = "INSERT INTO Clientes (nome_cliente, email_cliente, telefone_cliente) VALUES ('$campos'),";
+        // Query SQL com prepared statements
+        $query = "INSERT INTO Clientes (nome_cliente, email_cliente, telefone_cliente) VALUES ($1, $2, $3)";
         
-        // Executa a query
-        $resultado = pg_query($query);
+        // Prepara a consulta
+        $resultado = pg_prepare($conectarBD, "", $query);
         
-        // Verifica se a query foi executada com sucesso
         if ($resultado) {
-            echo "Nome inserido com sucesso no banco de dados.";
+            // Executa a consulta
+            $resultado = pg_execute($conectarBD, "", array($name, $email, $tel));
+            
+            // Verifica se a consulta foi bem-sucedida
+            if ($resultado) {
+                echo "Dados inseridos com sucesso no banco de dados.";
+            } else {
+                echo "Erro ao inserir dados no banco de dados: " . pg_last_error($conectarBD);
+            }
         } else {
-            echo "Erro ao inserir nome no banco de dados: ";
+            echo "Erro ao preparar a consulta: " . pg_last_error($conectarBD);
         }
     } else {
-        echo "Por favor, preencha o campo de nome.";
+        echo "Por favor, preencha todos os campos.";
     }
 }
 ?>
