@@ -45,4 +45,5 @@ id_fornecedor INT,
 FOREIGN KEY(id_estoque) REFERENCES Estoque (id_estoque),
 FOREIGN KEY(id_fornecedor) REFERENCES Fornecedor (id_fornecedor)
 )
-
+ALTER TABLE Clientes
+ADD COLUMN senha_cliente VARCHAR(255);
