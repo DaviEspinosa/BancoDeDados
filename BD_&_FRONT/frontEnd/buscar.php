@@ -1,21 +1,38 @@
 <?php
 include ('conectar.php');
 
-// consultando minha tabela
+// Verifica se o formulário foi submetido
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['enviar'])) {
-    $nome = $_POST['name']; // Recebe o nome do formulário
+    // Obtém os valores do formulário
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $tel = $_POST["number"];
 
-    // Inserir dados na tabela
-    $query = "INSERT INTO Clientes VALUES ('$nome', )";
-    $result = pg_query($conectarBD, $query);
-
-    if ($result) {
-        echo "Dados adicionados com sucesso!";
+    // Verifica se os campos não estão vazios
+    if (!empty($name) && !empty($email) && !empty($tel)) {
+        
+        // Query SQL com prepared statements
+        $query = "INSERT INTO Clientes (nome_cliente, email_cliente, telefone_cliente) VALUES ($1, $2, $3)";
+        
+        // Prepara a consulta
+        $resultado = pg_prepare($conectarBD, "", $query);
+        
+        if ($resultado) {
+            // Executa a consulta
+            $resultado = pg_execute($conectarBD, "", array($name, $email, $tel));
+            
+            // Verifica se a consulta foi bem-sucedida
+            if ($resultado) {
+                echo "Dados inseridos com sucesso no banco de dados.";
+            } else {
+                echo "Erro ao inserir dados no banco de dados: " . pg_last_error($conectarBD);
+            }
+        } else {
+            echo "Erro ao preparar a consulta: " . pg_last_error($conectarBD);
+        }
     } else {
-        echo "Erro ao adicionar dados.";
+        echo "Por favor, preencha todos os campos.";
     }
 }
-
-
-pg_close($conectarBD);
+?>
