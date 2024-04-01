@@ -30,18 +30,20 @@
     </header>
 
     <section class="container-form">
-        <form action="cadCliente.php" method="POST">
+        <form action="cadCliente.php" method="POST" style="height: 80%;">
             <h3>Cadastre-se</h3>
-            <label for="">Nome</label>
-            <input type="name" name="name" id="name" placeholder="..." required>
-            <label for="">E-mail</label>
-            <input type="email" name="email" id="email" placeholder="..." required>
-            <label for="">Senha</label>
-            <input type="password" name="password" id="password" placeholder="..." required>
-            <label for="">Telefone</label>
-            <input type="tel" name="number" id="number" placeholder="..." required>
+            <div class="container-input" style="height: 80%;">
+                <label for="">Nome</label>
+                <input type="name" name="name" id="name" required>
+                <label for="">E-mail</label>
+                <input type="email" name="email" id="email" required>
+                <label for="">Senha</label>
+                <input type="password" name="password" id="password" required>
+                <label for="">Telefone</label>
+                <input type="tel" name="number" id="number" required>
 
-            <button type="submit" name="enviar">Enviar</button>
+            </div>
+                <button type="submit" name="enviar">Enviar</button>
         </form>
     </section>
 
