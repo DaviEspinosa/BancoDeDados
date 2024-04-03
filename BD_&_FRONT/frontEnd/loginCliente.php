@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: index.html");
             // Faça o que for necessário aqui, por exemplo, redirecionar para uma página de perfil
         } else {
-            echo "Credenciais inválidas!";
+            header("Location: login.html");
         }
 
     } else {
