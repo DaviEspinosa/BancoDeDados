@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $port = "5432";
-$dbname = "PizzariaBD";
+$dbname = "pizzariabd";
 $user = "postgres";
 $password = "postgres";
 

@@ -1,33 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="pizzaria.css">
-</head>
+<link rel="stylesheet" href="pizzaria.css">
 
 <body>
     <div class="overlay"></div>
-    <header>
-        <div class="nav-bar">
-            <img src="" alt="logo">
-            <ul>
-                <li>
-                    <a href="">Faça seu pedido</a>
-                </li>
-                <li>link</li>
-                <li>link</li>
-                <li>
-                    <a href="">login/cadastro</a>
-                </li>
-            </ul>
-            <div class="search">
-                <!-- Icon search -->
-            </div>
-        </div>
-    </header>
+    
+    <?php
+        include('./fragmento/header.php');
+    ?>
 
     <section class="container-form">
         <form action="cadCliente.php" method="POST" style="height: 80%;">
@@ -42,6 +21,7 @@
                 <label for="">Telefone</label>
                 <input type="tel" name="number" id="number" required>
 
+                <a href="login.php">Entrar com minha conta</a>
             </div>
                 <button type="submit" name="enviar">Enviar</button>
         </form>
@@ -49,4 +29,3 @@
 
 </body>
 
-</html>
