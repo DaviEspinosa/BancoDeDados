@@ -7,7 +7,7 @@
                 </li>
                 <li>link</li>
                 <li>
-                    <a href="pedidos.php">Pedidos</a>
+                    <a href="registrarPedidos.php">Pedidos</a>
                 </li>
                 <li>
                     <a href="cadastro.php">login/cadastro</a>

@@ -1,8 +1,9 @@
 
+<link rel="stylesheet" href="root.css">
 <link rel="stylesheet" href="pizzaria.css">
 
 <body>
-    
+
     <div class="overlay"></div>
 
     <?php

@@ -1,0 +1,43 @@
+body{
+    overflow: hidden;
+}
+
+.container-registros{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .container-registros hr{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+} */
+.registrar-pedidos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    background-color: rgba(54, 51, 59, 0.438);
+    border-radius: .5rcap;
+    color: aliceblue;
+    font-size: 13px;
+}
+.etiquetas{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.caixas{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.registrar-pedidos input, .registrar-pedidos label{
+    width: 40%;
+
+}
