@@ -4,7 +4,6 @@
 
 <body>
 
-    <div class="overlay"></div>
 
     <?php
         include('./fragmento/header.php');
@@ -16,11 +15,10 @@
 
             <div class="container-input">
 
-                <label for="">Email</label>
-                <input type="email" name="email" id="email" required>
-                <label for="">Senha</label>
-                <input type="password" name="senha" id="senha" required>
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
+                <input type="password" name="senha" id="senha" placeholder="Senha" required>
                 <br>
+
                 <div class="forgot-remember">
                     <div class="remember-password">
                         <input type="radio" name="remember" id="remember">

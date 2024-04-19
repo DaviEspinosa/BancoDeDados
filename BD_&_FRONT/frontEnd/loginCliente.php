@@ -25,10 +25,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (pg_num_rows($result) > 0) {
             echo "Usuário autenticado com sucesso!";
-            header("Location: index.html");
+            header("Location: index.php");
             // Faça o que for necessário aqui, por exemplo, redirecionar para uma página de perfil
         } else {
-            header("Location: login.html");
+            header("Location: pageLogin.php");
         }
 
     } else {

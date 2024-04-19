@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             // Verifica se a consulta foi bem-sucedida
             if ($resultado) {
-                header("Location: login.html");
+                header("Location: pageLogin.php");
             } else {
                 echo "Erro ao inserir dados no banco de dados: " . pg_last_error($conectarBD);
             }
@@ -37,3 +37,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+    

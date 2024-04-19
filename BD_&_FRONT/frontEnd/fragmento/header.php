@@ -7,10 +7,10 @@
                 </li>
                 <li>link</li>
                 <li>
-                    <a href="registrarPedidos.php">Pedidos</a>
+                    <a href="pagePedidos.php">Pedidos</a>
                 </li>
                 <li>
-                    <a href="cadastro.php">login/cadastro</a>
+                    <a href="pageCadastro.php">login/cadastro</a>
                 </li>
             </ul>
             <div class="search">
