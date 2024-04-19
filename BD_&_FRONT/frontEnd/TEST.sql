@@ -159,3 +159,29 @@ FROM PIZZA;
 
 ------------------------ LISTA DOIS------------------------------
 
+--1
+SELECT CLIENTE.NOME, PEDIDO.ID_PEDIDO FROM 
+PEDIDO INNER JOIN CLIENTE ON PEDIDO.ID_CLIENTE = CLIENTE.ID_CLIENTE;
+--2
+SELECT * FROM PEDIDO WHERE data_pedido between '2024-01-01' and '2024-04-19';
+
+--3
+SELECT * FROM itens_pedido WHERE id_item_pedido = 1;
+
+--4
+SELECT cliente_id, SUM(total) AS total_gasto FROM PEDIDO WHERE cliente_id = 2 GROUP BY cliente_id;
+
+--5
+SELECT SABOR, count(*) AS TOTAL_PEDIDOS FROM itens_pedido WHERE TIPO = 'pizza' GROUP BY SABOR ORDER BY TOTAL_PEDIDOS desc;
+
+--6
+SELECT * FROM CARDAPIO WHERE TIPO = 'pizza' and SABOR = 'Calabresa';
+
+--7
+SELECT * FROM FUNCIONARIO;
+
+--8
+SELECT * FROM HORARIO;
+
+--9
+SELECT * FROM PEDIDO WHERE status = 'em andamento';
