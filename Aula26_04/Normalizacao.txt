@@ -1,0 +1,38 @@
+===Pedido===
+
+cod_pedido 			int (pk)
+prazo_entrega 			date
+data_pedido 			date
+inscrição_estadual 		varchar
+
+
+===Item_Pedido===  (Relação)
+
+cod_pedido 			int (fk)
+cod_produto 			int (fk)
+quantidade_produto 		int
+valor_total 			double
+
+
+===Produto===
+
+cod_produto 			int (pk)
+unidade 			int
+valor_unitario 			int
+descricao_produto 		varchar 
+
+
+===Vendedor===
+
+cod_vendedor 			int (pk)
+nome_vendedor 			varchar
+
+
+===Cliente===
+
+cgc				int (pk)
+nome_cli 			varchar
+IE
+
+
+

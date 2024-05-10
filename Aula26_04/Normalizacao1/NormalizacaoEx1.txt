@@ -1,0 +1,21 @@
+===Alocacao_Projeto===
+cod_funcionario (fk)(pk)
+cod_cargo (fk)(pk)
+cod_projeto (fk)(pk)
+data_inicio_alocacao
+tempo_alocacao
+
+===Funcionario===
+cod_funcionario (pk)
+nome_funcionario...
+
+===Cargo===
+cod_cargo (pk)
+nome_cargo...
+salario...
+
+===Projeto===
+cod_projeto (pk)
+nome_projeto
+tipo_projeto
+descricao
