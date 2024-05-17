@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="hhtps://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locadora de Carros</title>
+    <link rel="stylesheet" th:href="@{/fragmentosCss/header.css}">
+    <link rel="stylesheet" th:href="@{index.css}">
+</head>
+<body>
+
+    
+    <div th:insert="~{fragmentos/header :: header}"></div>
+
+    <div class="container">
+        <h2>Bem-vindo à nossa locadora de carros!</h2>
+        <p>
+            Aqui na nossa locadora, oferecemos uma ampla seleção de veículos para atender às suas necessidades de transporte. 
+            Se você precisa de um carro compacto para se locomover na cidade ou de um SUV espaçoso para uma viagem em família, 
+            nós temos o veículo certo para você.
+        </p>
+        <p>
+            Além disso, proporcionamos um serviço de alta qualidade, com tarifas acessíveis e uma equipe dedicada para garantir 
+            a sua satisfação durante toda a sua experiência de aluguel de carros.
+        </p>
+        <p>
+            Explore nosso site para descobrir nossos carros disponíveis, tarifas de aluguel e faça sua reserva online hoje mesmo!
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Locadora de Carros. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
