@@ -1,0 +1,58 @@
+exercicio 1 concluído
+
+CREATE TABLE seguros (
+    id_seguros SERIAL PRIMARY KEY,
+    id_carro serial,
+    seguradora VARCHAR(100),
+    tipo_seguro VARCHAR(100),
+    cobertura VARCHAR(255),
+    valor_seguro DECIMAL(10, 2),
+    FOREIGN KEY (id_carro) REFERENCES carro
+);
+
+	
+
+CREATE TABLE devolucoes (
+    id_devolucoes SERIAL PRIMARY KEY,
+    id_reserva INT,
+    data_devolucao DATE,
+    condicao_veiculo VARCHAR(255),
+    custos_adicionais DECIMAL(10, 2),
+    FOREIGN KEY (id_reserva) REFERENCES reservas	
+);
+
+
+CREATE TABLE reservas (
+    id_reservas SERIAL PRIMARY KEY,
+    id_cliente Serial,
+    id_carro Serial,
+    data_reserva DATE,
+    data_devolucao DATE,
+    FOREIGN KEY (id_cliente) REFERENCES cliente
+    FOREIGN KEY (id_carro) REFERENCES carro
+);
+
+
+
+select * From cliente
+select * from funcionarios
+
+select * from cliente
+join reservas 
+ON reservas.id_cliente = cliente.id_cliente
+where reservas.id_reservas = 1
+
+
+select * from carro
+join reservas
+on reservas.id_carro = reservas.id_carro
+where reservas.id_cliente = 2
+
+
+
+
+
+    String tipo;
+    String placa;
+    Boolean disponibilidade;
+    int ano;

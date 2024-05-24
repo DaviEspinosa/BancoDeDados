@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="hhtps://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locadora de Carros</title>
+    <link rel="stylesheet" th:href="@{/fragmentosCss/header.css}">
+    <link rel="stylesheet" th:href="@{/interna/funcionario.css}">
+</head>
+
+<body>
+
+
+    <div th:insert="~{fragmentos/header :: header}"></div>
+
+    <div class="lista-carros">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Modelo</th>
+                <th>Tipo</th>
+                <th>Ano</th>
+                <th>Placa</th>
+                <th>Disponibilidade</th>
+            </tr>
+            <!-- Loop para exibir os produtos -->
+            <tr th:each="carro : ${carro}">
+                <td th:text="${carro.id}"></td>
+                <td th:text="${carro.modelo}"></td>
+                <td th:text="${carro.tipo}"></td>
+                <td th:text="${carro.ano}"></td>
+                <td th:text="${carro.placa}"></td>
+                <!-- <td th:text="${carro.disponibilidade}"></td> -->
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

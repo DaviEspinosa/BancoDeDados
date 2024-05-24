@@ -10,24 +10,25 @@ html, body {
     width: 100%;
     height: 100%;
 }
-.login{
+.cadastro{
     width: 100%;
     height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.content-login{
+.content-cadastro{
     display: flex;
+    justify-content: center;
     box-shadow: 2px 2px 20px 0px grey ;
     border-radius: 10px;
     width: 50%;
-    height: 45%;
+    height: 70%;
 }
 
 /* Lado esquerda (formulario) */
 .form{
-    width: 45%;
+    width: 90%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -35,23 +36,23 @@ html, body {
     align-items: center;
     border-radius: 5px;
 }
-.inputs-login{
+.inputs-cadastro{
     width: 100%;
     height: 60%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content:space-evenly;
     align-items: center;
 }
-.inputs-login input{
-    width: 90%;
+.inputs-cadastro input{
+    width: 45%;
     height: 40px;
     border-radius: 5px;
     border: none;
     background-color: #74747431;
 }
 .form button{
-    padding: 5px 50px 5px 50px;
+    padding: 10px 100px 10px 100px;
     background-color: var(--mainColor);
     border: 2px solid var(--mainColor);
     color: aliceblue;
@@ -60,34 +61,7 @@ html, body {
 .form button:hover{
     transition: .5s;
     border-radius:0px ;
-    padding: 5px 55px 5px 55px;
+    padding: 10px 105px 10px 105px;
     background-color: transparent;
     color: var(--mainColor);
-}
-
-/* Lado direito (cadastrar) */
-.right{
-    width: 45%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.cadastrar{
-    width: 80%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.cadastrar a{
-    width: 100%;
-    height: 40px;
-    border-radius: 20px;
-}
-.cadastrar button{
-    width: 100%;
-    height: 40px;
-    border-radius: 20px;
 }

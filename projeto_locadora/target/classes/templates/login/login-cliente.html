@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Usuário</title>
+    <link rel="stylesheet" th:href="@{/fragmentosCss/header.css}">
+    <link rel="stylesheet" th:href="@{/loginCss/login.css}">
+</head>
+
+<body>
+    <div th:insert="~{fragmentos/header :: header}"></div>
+
+    <div class="login">
+
+        <div class="content-login">
+
+            <form action="login-cliente" class="form">
+                <h2>Login</h2>
+                <div class="inputs-login">
+                    <input type="email" name="email" id="" placeholder="E-mail">
+                    <input type="password" name="senha" id="" placeholder="Senha">
+                    <div class="" style="width: 100%;">
+                        <a href="" style="font-size: smaller; margin-left: 15px;">Esqueci minha senha</a>
+                    </div>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+
+            <hr>
+
+            <div class="right">
+                <div class="cadastrar">
+                    <a href="/cadastro">
+                        <button style="background-color: black; color: aliceblue;">Cadastrar</button>
+                    </a>
+                    <p>or</p>
+                    <button style="background-color: transparent; border: 2px solid #d6082d;">Cadastrar com Google</button>
+                    <br>
+                    <button style="background-color: transparent; border: 2px solid #d6082d;">Cadastrar com Facebook</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
