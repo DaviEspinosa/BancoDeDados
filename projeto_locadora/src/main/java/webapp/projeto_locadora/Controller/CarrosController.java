@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import webapp.projeto_locadora.Repository.CarroRepository;
@@ -19,10 +20,10 @@ public class CarrosController {
     @Autowired
     private CarroService carroService;
 
-    @DeleteMapping("/{id}")
-    public String deletarCarro(@PathVariable int id) {
+  @GetMapping("/deletar-carro/{id}")
+    public String deletarCarro(@PathVariable Integer id) {
         carrosRepository.deleteById(id);
-        return "redirect:/carro";
+        return "interna/funcionario";
     }
 
 }

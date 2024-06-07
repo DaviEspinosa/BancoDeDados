@@ -19,21 +19,23 @@ public class FuncionariosController {
     private FuncionarioRepository funcionarioRepository;
 
      @PostMapping("acesso-funcionario")
-     public String acessoFuncionario(Funcionario funcionario, RedirectAttributes attributes) {
+     public ModelAndView acessoFuncionario(Funcionario funcionario, RedirectAttributes attributes) {
          
         boolean verificaEmail =  funcionarioRepository.existsByEmail(funcionario.getEmail());
         boolean verificaSenha = funcionarioRepository.existsBySenha(funcionario.getSenha());
 
         try {
-            if (!verificaSenha == funcionario.getSenha().isEmpty() || verificaEmail == funcionario.getEmail().isEmpty()) {
+            if (funcionario.getSenha().isEmpty() || funcionario.getEmail().isEmpty()) {
                 attributes.addFlashAttribute("textoVazio", "Preencha Todos os Campos, Por favor...");
+                mv.setViewName("redirect:loginFuncionario");
             }
             else{
                 if (verificaEmail && verificaSenha) {
                     mv.setViewName("redirect:funcionario");
                 }
                 else{
-                    attributes.addFlashAttribute("usuarioInvalido", "Usuário não Encontrado!!!");
+                    attributes.addFlashAttribute("funcionarioInvalido", "Funcionário não Encontrado!!!");
+                    mv.setViewName("redirect:loginFuncionario");
                 }
             }
             
@@ -41,7 +43,7 @@ public class FuncionariosController {
             System.out.println(e);
         }
          
-         return "";
+        return mv;
      }
      
 }

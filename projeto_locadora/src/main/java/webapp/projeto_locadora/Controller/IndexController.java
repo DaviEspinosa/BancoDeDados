@@ -35,7 +35,7 @@ public class IndexController {
         carroService.listaCarros(model);
         return "interna/funcionario";
     }
-    @GetMapping("/login-funcionario")
+    @GetMapping("/loginFuncionario")    
     public String pageLoginFuncionario() {    
         return "login/login-funcionario";
     }

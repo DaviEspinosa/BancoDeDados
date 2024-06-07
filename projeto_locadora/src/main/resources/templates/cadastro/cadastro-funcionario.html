@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Usuário</title>
+    <link rel="stylesheet" th:href="@{/fragmentosCss/header.css}">
+    <link rel="stylesheet" th:href="@{/cadastroCss/cadastro.css}">
+</head>
+
+<body>
+    <div th:insert="~{fragmentos/header :: header}"></div>
+
+    <div class="cadastro-funcionario">
+
+        <div class="content-cadastro-funcionario">
+
+            <form action="cadastro-cliente-funcionario" class="form" method="post">
+                <h2>Cadastro de Funcionário</h2>
+                <div class="inputs-cadastro">
+                    <input type="text" name="nome" id="" placeholder="Nome" required>
+                    <input type="text" name="sobrenome" id="" placeholder="Sobrenome" required>
+                    <input type="email" name="email" id="" placeholder="E-mail" style="width: 94%;" required> 
+                    <input type="text" name="cpf" id="" placeholder="Cpf" required>
+                    <input type="password" name="" id="" placeholder="Senha" required>
+                    <input type="password" name="senha" id="" placeholder="Confirme sua Senha" required>
+                    <input type="text" name="telefone" id="" placeholder="Telefone" required>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

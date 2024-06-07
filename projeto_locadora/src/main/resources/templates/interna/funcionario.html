@@ -37,7 +37,7 @@
                     <td th:text="${carro.ano}"></td>
                     <td th:text="${carro.placa}"></td>
                     <td>
-                        <form th:action="@{/carro/{id}(id=${carro.id})}" method="post">
+                        <form th:action="@{/deletar-carro/{id}(id=${carro.id})}" method="post">
                             <input type="hidden" name="_method" value="delete"/>
                             <button type="submit">Remover</button>
                         </form>

@@ -14,12 +14,17 @@
 
     <div class="login-funcionario">
 
+        <p class="mensagemError" th:text="${textoVazio}"></p>
+        <p class="mensagemError" th:text="${funcionarioInvalido}"></p>
+
         <div class="content-login-funcionario">
 
 
             <div class="left">
                 <div class="cadastrar-funcionario">
-                    <button style="background-color: black; color: aliceblue;">Cadastrar</button>
+                    <a href="cadastro-funcionario">
+                        <button style="background-color: black; color: aliceblue;">Cadastrar</button>
+                    </a>
                     <p>or</p>
                     <button style="background-color: transparent; border: 2px solid #d6082d;">Cadastrar com
                         Google</button>
@@ -31,7 +36,7 @@
 
             <hr>
 
-            <form action="acesso-funcionario" class="form">
+            <form action="acesso-funcionario" class="form" method="post">
                 <h2>Login de Funcionário</h2>
                 <div class="inputs-login-funcionario">
                     <input type="email" name="email" id="" placeholder="E-mail">
