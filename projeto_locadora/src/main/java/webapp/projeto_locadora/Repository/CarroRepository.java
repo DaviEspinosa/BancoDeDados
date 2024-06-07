@@ -6,4 +6,5 @@ import webapp.projeto_locadora.Model.Carro;
 
 public interface CarroRepository extends CrudRepository<Carro, Integer>{
     
+    
 }

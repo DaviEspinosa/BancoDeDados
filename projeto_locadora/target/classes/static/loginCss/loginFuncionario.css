@@ -1,0 +1,93 @@
+:root{
+    --mainfont: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --mainColor: #d6082d;
+}
+
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.login-funcionario{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-login-funcionario{
+    display: flex;
+    box-shadow: 2px 2px 20px 0px grey ;
+    border-radius: 10px;
+    width: 50%;
+    height: 45%;
+}
+
+/* Lado esquerda (formulario) */
+.form{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+}
+.inputs-login-funcionario{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.inputs-login-funcionario input{
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #74747431;
+}
+.form button{
+    padding: 5px 50px 5px 50px;
+    background-color: var(--mainColor);
+    border: 2px solid var(--mainColor);
+    color: aliceblue;
+    border-radius:5px ;
+}
+.form button:hover{
+    transition: .5s;
+    border-radius:0px ;
+    padding: 5px 55px 5px 55px;
+    background-color: transparent;
+    color: var(--mainColor);
+}
+
+/* Lado direito (cadastrar-funcionario) */
+.left{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cadastrar-funcionario{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cadastrar-funcionario a{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+}
+.cadastrar-funcionario button{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+}

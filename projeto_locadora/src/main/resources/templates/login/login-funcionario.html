@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Funcionário</title>
+    <link rel="stylesheet" th:href="@{/fragmentosCss/header.css}">
+    <link rel="stylesheet" th:href="@{/loginCss/login-funcionario.css}">
+</head>
+
+<body>
+    <div th:insert="~{fragmentos/header :: header}"></div>
+
+    <div class="login-funcionario">
+
+        <div class="content-login-funcionario">
+
+
+            <div class="left">
+                <div class="cadastrar-funcionario">
+                    <button style="background-color: black; color: aliceblue;">Cadastrar</button>
+                    <p>or</p>
+                    <button style="background-color: transparent; border: 2px solid #d6082d;">Cadastrar com
+                        Google</button>
+                    <br>
+                    <button style="background-color: transparent; border: 2px solid #d6082d;">Cadastrar com
+                        Facebook</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <form action="acesso-funcionario" class="form">
+                <h2>Login de Funcionário</h2>
+                <div class="inputs-login-funcionario">
+                    <input type="email" name="email" id="" placeholder="E-mail">
+                    <input type="password" name="senha" id="" placeholder="Senha">
+                    <div class="" style="width: 100%;">
+                        <a href="" style="font-size: smaller; margin-left: 15px;">Esqueci minha senha</a>
+                    </div>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>
