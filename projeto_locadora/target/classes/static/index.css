@@ -174,9 +174,10 @@ body {
 }
 
 .rent-button {
-    background-color: #007BFF;
+    background-color:#d6082d;
     color: #fff;
     border: none;
+    border: 2px solid #d6082d;
     border-radius: 4px;
     padding: 10px 20px;
     font-size: 1em;
@@ -185,5 +186,6 @@ body {
 }
 
 .rent-button:hover {
-    background-color: #0056b3;
+    background-color:transparent;
+    color: #d6082d;
 }
