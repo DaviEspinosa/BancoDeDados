@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Usuário</title>
     <link rel="stylesheet" th:href="@{/fragmentosCss/header.css}">
-    <link rel="stylesheet" th:href="@{/cadastroCss/cadastro.css}">
+    <link rel="stylesheet" th:href="@{/cadastroCss/cadastro-cliente.css}">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
                 <div class="inputs-cadastro">
                     <input type="text" name="nome" id="" placeholder="Nome" required>
                     <input type="text" name="sobrenome" id="" placeholder="Sobrenome" required>
-                    <input type="email" name="email" id="" placeholder="E-mail" style="width: 94%;" required> 
+                    <input type="email" name="email" id="" placeholder="E-mail" required>
                     <input type="text" name="cpf" id="" placeholder="Cpf" required>
                     <input type="password" name="" id="" placeholder="Senha" required>
                     <input type="password" name="senha" id="" placeholder="Confirme sua Senha" required>
@@ -29,8 +29,14 @@
                     <input type="text" name="endereco" id="" placeholder="Endereço" required>
                     <input type="text" name="estado" id="" placeholder="Estado" required>
                     <input type="text" name="cidade" id="" placeholder="Cidade" required>
+                    <button type="submit">Cadastrar</button>
                 </div>
-                <button type="submit">Entrar</button>
+                <button style="margin-top: 40px;" class="button-connect-google">
+                    Google 
+                </button>
+                <button style="margin-top: 40px;" class="button-connect-facebook">
+                    Facebook 
+                </button>
             </form>
 
 
