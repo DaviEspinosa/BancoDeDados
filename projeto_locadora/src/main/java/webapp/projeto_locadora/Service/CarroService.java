@@ -1,10 +1,13 @@
 package webapp.projeto_locadora.Service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
 import jakarta.transaction.Transactional;
+import webapp.projeto_locadora.Model.Carro;
 import webapp.projeto_locadora.Repository.CarroRepository;
 
 @Service
@@ -22,4 +25,10 @@ public class CarroService {
     public void deleteItemById(Integer id) {
         carroRepository.deleteById(id);
     }
+
+
+
+
 }
+
+

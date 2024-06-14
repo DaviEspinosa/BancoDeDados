@@ -41,7 +41,15 @@ html, body {
 }
 
 .btn-add {
-    margin-top: 20px;
+    position: fixed;
+    background-color: #d6082d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    bottom: 2em;
+    right: 2em;
     display: block;
 }
 
