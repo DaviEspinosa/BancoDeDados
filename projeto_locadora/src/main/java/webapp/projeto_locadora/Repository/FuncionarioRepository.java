@@ -13,4 +13,5 @@ public interface FuncionarioRepository extends CrudRepository<Funcionario, Integ
 
     boolean existsByEmail (String email);
     boolean existsBySenha (String senha);
+    boolean existsByCpf(String cpf);
 }

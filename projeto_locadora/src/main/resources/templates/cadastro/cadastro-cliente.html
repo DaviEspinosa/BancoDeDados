@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="hhtps://thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,9 @@
 
         <div class="content-cadastro">
 
-            <form action="cadastro-cliente" class="form">
+            <p class="mensagem" th:text="${mensagem}"></p>
+
+            <form action="cadastrar-cliente" class="form" method="post">
                 <h2>Cadastro</h2>
                 <div class="inputs-cadastro">
                     <input type="text" name="nome" id="" placeholder="Nome" required>
@@ -25,7 +27,7 @@
                     <input type="text" name="cpf" id="" placeholder="Cpf" required>
                     <input type="password" name="" id="" placeholder="Senha" required>
                     <input type="password" name="senha" id="" placeholder="Confirme sua Senha" required>
-                    <input type="text" name="telefone" id="" placeholder="Telefone" required>
+                    <input type="text" name="celular" id="" placeholder="Telefone" required>
                     <input type="text" name="endereco" id="" placeholder="Endereço" required>
                     <input type="text" name="estado" id="" placeholder="Estado" required>
                     <input type="text" name="cidade" id="" placeholder="Cidade" required>

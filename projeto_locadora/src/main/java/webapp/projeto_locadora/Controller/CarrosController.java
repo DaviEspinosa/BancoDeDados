@@ -8,22 +8,25 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 import webapp.projeto_locadora.Repository.CarroRepository;
 import webapp.projeto_locadora.Service.CarroService;
 
 @Controller
-@RequestMapping("/carro")
 public class CarrosController {
 
     @Autowired
     private CarroRepository carrosRepository;
-    @Autowired
-    private CarroService carroService;
 
-  @GetMapping("/deletar-carro/{id}")
-    public String deletarCarro(@PathVariable Integer id) {
-        carrosRepository.deleteById(id);
-        return "interna/funcionario";
+    @DeleteMapping("/deletar-carro/{id}")
+    public String deletarCarro(@PathVariable Integer id, RedirectAttributes attributes) {
+        try {
+            carrosRepository.deleteById(id);
+            attributes.addFlashAttribute("mensagem", "Carro removido com sucesso!");
+        } catch (Exception e) {
+            attributes.addFlashAttribute("mensagem", "Erro ao remover carro!");
+        }
+        return "redirect:/funcionario";
     }
-
 }

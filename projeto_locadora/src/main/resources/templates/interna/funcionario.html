@@ -16,48 +16,75 @@
 
     <div th:insert="~{fragmentos/header :: header}"></div>
 
-    <div class="lista-carros">
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Modelo</th>
-                    <th>Tipo</th>
-                    <th>Ano</th>
-                    <th>Placa</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Loop para exibir os produtos -->
-                <tr th:each="carro : ${carro}">
-                    <td th:text="${carro.id}"></td>
-                    <td th:text="${carro.modelo}"></td>
-                    <td th:text="${carro.tipo}"></td>
-                    <td th:text="${carro.ano}"></td>
-                    <td th:text="${carro.placa}"></td>
-                    <td>
-                        <form th:action="@{/deletar-carro/{id}(id=${carro.id})}" method="post">
-                            <input type="hidden" name="_method" value="delete"/>
-                            <button type="submit">Remover</button>
-                        </form>
-                    </td>
-                    <td>
-                        <form th:action="@{/carro/{id}(id=${carro.id})}" method="post">
-                            <input type="hidden" name="_method" value="edit"/>
-                            <button type="submit">Editar</button>
-                        </form>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="main">
 
-    </div>
+        <div class="lista-carros">
+            <table>
+                <thead  class="titulo-list">
+                    <tr>
+                        <th>ID</th> 
+                        <th>Modelo</th>
+                        <th>Tipo</th>
+                        <th>Ano</th>
+                        <th>Placa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Loop para exibir os produtos -->
+                    <tr th:each="carro : ${carro}">
+                        <td th:text="${carro.id}"></td>
+                        <td th:text="${carro.modelo}"></td>
+                        <td th:text="${carro.tipo}"></td>
+                        <td th:text="${carro.ano}"></td>
+                        <td th:text="${carro.placa}"></td>
+                        <td>
+                            <form class="confirm-delete" th:action="@{/deletar-carro/{id}(id=${carro.id})}" method="post">
+                                <input type="hidden" name="_method" value="delete" />
+                                <button type="submit" onclick="verificarDelete()">Remover</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form th:action="@{/carro/{id}(id=${carro.id})}" method="post">
+                                <input type="hidden" name="_method" value="edit" />
+                                <button type="submit">Editar</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
         <!-- Botão Adicionar -->
         <button class="btn btn-add">
             <i class="fas fa-plus"></i> Adicionar
         </button>
-    
-</body>
 
+<!-- Caixa de verificação oculta -->
+<div class="caixaVerificacao" id="caixaVerificacao">
+    <div class="caixaMensagem">
+        <p>Deseja realmente excluir este item?</p>
+        <div class="botoes">
+            <button onclick="confirmarExclusao()">Sim, Excluir</button>
+            <button onclick="fecharCaixa()">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function verificarDelete() {
+        var caixaVerificacao = document.getElementById('caixaVerificacao');
+        caixaVerificacao.style.display = 'block';
+    }
+
+    function confirmarExclusao() {
+        // Aqui você colocaria a lógica para deletar o item
+        console.log('Item deletado!');
+        fecharCaixa();
+    }
+
+    function fecharCaixa() {
+        var caixaVerificacao = document.getElementById('caixaVerificacao');
+        caixaVerificacao.style.display = 'none';
+    }
+</script>
 </html>

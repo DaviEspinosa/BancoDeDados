@@ -11,16 +11,45 @@ html, body {
     height: 100%;
 }
 
-.lista-carros{
+.main{
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.lista-carros table{
-    width: 80%;
-    height: 50px;
+.lista-carros {
+    width: 60%;
+    height: 30vh; /* 50% da altura da viewport */
+    overflow-y: auto; /* Permite a rolagem se o conteúdo ultrapassar a altura */
 }
-.lista-carros table tbody tr td{
 
+.lista-carros table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse; /* Certifica que a tabela ocupe todo o espaço disponível */
+}
+
+.lista-carros th, .lista-carros td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.lista-carros th {
+    background-color: #f2f2f2;
+}
+
+.btn-add {
+    margin-top: 20px;
+    display: block;
+}
+
+/* CAIXA PARA VERIFICAR EXCLUSÃO */
+.caixaVerificacao{
+    display: none;
+    background-color: #d6082d;
+    position: fixed;
+    width: 150px;
+    height: 100px;
 }
